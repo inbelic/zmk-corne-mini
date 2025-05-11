@@ -10,14 +10,7 @@
 //testing mouse movement and scroll binds...
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        mod {
-            bindings = <&kp LEFT_GUI>;
-            key-positions = <37 40>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     //
 
@@ -78,10 +71,10 @@
         ADJ {
             display-name = "System";
             bindings = <
-&none  &kp F1        &kp F2        &kp F3        &kp F4      &kp F5            &kp F6  &kp F7  &kp F8  &kp F9  &kp F10      &none
-&none  &kp F11       &kp F12       &none         &none       &none             &none   &none   &none   &none   &none        &none
-&none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR  &bt BT_CLR_ALL    &none   &none   &none   &none   &bootloader  &none
-                                   &none         &trans      &none             &none   &trans  &none
+&none  &bt BT_SEL 1    &kp W  &kp E  &none   &none             &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &bt BT_CLR_ALL  &none
+&none  &bt BT_SEL 0    &kp S  &kp D  &kp F   &none             &kp H         &kp J         &kp K         &kp L         &bt BT_CLR      &none
+&none  &kp LEFT_SHIFT  &none  &none  &kp V   &kp B             &none         &none         &none         &none         &kp LEFT_GUI    &none
+                              &none  &trans  &kp LEFT_SHIFT    &kp LEFT_GUI  &trans        &none
             >;
         };
     };
