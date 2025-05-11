@@ -10,7 +10,14 @@
 //testing mouse movement and scroll binds...
 
 / {
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        mod {
+            bindings = <&kp LEFT_GUI>;
+            key-positions = <37 40>;
+        };
+    };
 
     //
 
