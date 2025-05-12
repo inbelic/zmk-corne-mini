@@ -14,29 +14,6 @@
 
     //
 
-    macros {
-        macro_me: macro_modf {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_GUI &kp ENTER>;
-            label = "MACRO_MODF";
-        };
-
-        macro_mf: macro_mf {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_GUI &kp F>;
-            label = "MACRO_MF";
-        };
-
-        macro_ml: macro_ml {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_GUI &kp L>;
-            label = "MACRO_ML";
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -67,10 +44,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&none  &kp N1  &kp N2    &kp N3        &kp N4           &kp N5           &kp N6   &kp N7   &kp N8         &kp N9           &kp N0        &none
-&none  &none   &none     &kp UP        &none            &kp PAGE_UP      &none    &kp TAB  &kp RIGHT_ALT  &kp C_VOLUME_UP  &kp C_BRI_UP  &none
-&none  &none   &kp LEFT  &kp DOWN      &kp RIGHT_ARROW  &kp PAGE_DOWN    &none    &none    &none          &kp C_VOL_DN     &kp C_BRI_DN  &none
-                         &kp LEFT_WIN  &trans           &kp BACKSPACE    &kp RET  &trans   &trans
+&none  &kp N1  &kp N2    &kp N3    &kp N4           &kp N5           &kp N6   &kp N7   &kp N8             &kp N9           &kp N0        &none
+&none  &none   &none     &kp UP    &none            &kp PAGE_UP      &none    &kp TAB  &mt RIGHT_ALT TAB  &kp C_VOLUME_UP  &kp C_BRI_UP  &none
+&none  &none   &kp LEFT  &kp DOWN  &kp RIGHT_ARROW  &kp PAGE_DOWN    &none    &none    &none              &kp C_VOL_DN     &kp C_BRI_DN  &none
+                         &trans    &trans           &kp BACKSPACE    &kp RET  &trans   &trans
             >;
         };
 
@@ -94,10 +71,10 @@
         ADJ {
             display-name = "System";
             bindings = <
-&none  &bt BT_SEL 1    &kp W  &kp E  &none      &none             &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &bt BT_CLR_ALL  &none
-&none  &bt BT_SEL 0    &kp S  &kp D  &macro_mf  &macro_me         &kp H         &kp J         &kp K         &kp L         &bt BT_CLR      &none
-&none  &kp LEFT_SHIFT  &none  &none  &kp V      &kp B             &none         &none         &none         &none         &none           &none
-                              &none  &trans     &kp LEFT_SHIFT    &macro_ml     &trans        &none
+&none  &bt BT_SEL 1    &mt LEFT_GUI W  &mt LEFT_GUI E  &none           &none                 &kp NUMBER_1    &kp NUMBER_2    &kp NUMBER_3    &kp NUMBER_4    &bt BT_CLR_ALL   &none
+&none  &bt BT_SEL 0    &mt LEFT_GUI S  &mt LEFT_GUI D  &mt LEFT_GUI F  &mt LEFT_GUI ENTER    &mt LEFT_GUI H  &mt LEFT_GUI J  &mt LEFT_GUI K  &mt LEFT_GUI L  &bt BT_CLR       &none
+&none  &kp LEFT_SHIFT  &none           &none           &mt LEFT_GUI V  &mt LEFT_GUI B        &none           &none           &none           &none           &kp RIGHT_SHIFT  &none
+                                       &none           &trans          &none                 &none           &trans          &none
             >;
         };
     };
