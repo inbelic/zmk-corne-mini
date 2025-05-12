@@ -14,6 +14,29 @@
 
     //
 
+    macros {
+        macro_me: macro_modf {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_GUI &kp ENTER>;
+            label = "MACRO_MODF";
+        };
+
+        macro_mf: macro_mf {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_GUI &kp F>;
+            label = "MACRO_MF";
+        };
+
+        macro_ml: macro_ml {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_GUI &kp L>;
+            label = "MACRO_ML";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -71,10 +94,10 @@
         ADJ {
             display-name = "System";
             bindings = <
-&none  &bt BT_SEL 1    &kp W  &kp E  &none   &none             &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &bt BT_CLR_ALL  &none
-&none  &bt BT_SEL 0    &kp S  &kp D  &kp F   &none             &kp H         &kp J         &kp K         &kp L         &bt BT_CLR      &none
-&none  &kp LEFT_SHIFT  &none  &none  &kp V   &kp B             &none         &none         &none         &none         &kp LEFT_GUI    &none
-                              &none  &trans  &kp LEFT_SHIFT    &kp LEFT_GUI  &trans        &none
+&none  &bt BT_SEL 1    &kp W  &kp E  &none      &none             &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &bt BT_CLR_ALL  &none
+&none  &bt BT_SEL 0    &kp S  &kp D  &macro_mf  &macro_me         &kp H         &kp J         &kp K         &kp L         &bt BT_CLR      &none
+&none  &kp LEFT_SHIFT  &none  &none  &kp V      &kp B             &none         &none         &none         &none         &none           &none
+                              &none  &trans     &kp LEFT_SHIFT    &macro_ml     &trans        &none
             >;
         };
     };
