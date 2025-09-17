@@ -71,10 +71,10 @@
         ADJ {
             display-name = "System";
             bindings = <
-&none  &bt BT_SEL 1    &mt LEFT_GUI W  &mt LEFT_GUI E  &none           &none                 &kp NUMBER_1    &kp NUMBER_2    &kp NUMBER_3    &kp NUMBER_4    &bt BT_CLR_ALL   &none
-&none  &bt BT_SEL 0    &mt LEFT_GUI S  &mt LEFT_GUI D  &mt LEFT_GUI F  &mt LEFT_GUI ENTER    &mt LEFT_GUI H  &mt LEFT_GUI J  &mt LEFT_GUI K  &mt LEFT_GUI L  &bt BT_CLR       &none
-&none  &kp LEFT_SHIFT  &none           &none           &mt LEFT_GUI V  &mt LEFT_GUI B        &none           &none           &none           &none           &kp RIGHT_SHIFT  &none
-                                       &none           &trans          &none                 &none           &trans          &none
+&none  &bt BT_SEL 1  &mt LEFT_GUI W  &mt LEFT_GUI E  &none           &none                 &kp NUMBER_1    &kp NUMBER_2    &kp NUMBER_3    &kp NUMBER_4    &bt BT_SEL 2     &none
+&none  &bt BT_SEL 0  &mt LEFT_GUI S  &mt LEFT_GUI D  &mt LEFT_GUI F  &mt LEFT_GUI ENTER    &mt LEFT_GUI H  &mt LEFT_GUI J  &mt LEFT_GUI K  &mt LEFT_GUI L  &bt BT_CLR       &none
+&none  &kp LEFT_ALT  &none           &none           &mt LEFT_GUI V  &mt LEFT_GUI B        &none           &none           &none           &none           &kp RIGHT_SHIFT  &none
+                                     &none           &trans          &none                 &none           &trans          &none
             >;
         };
     };
